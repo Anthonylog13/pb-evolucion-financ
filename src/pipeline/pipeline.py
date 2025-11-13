@@ -102,7 +102,7 @@ class Pipeline:
             self.logger.info("\n" + "=" * 70)
             self.logger.success(" PIPELINE COMPLETADO EXITOSAMENTE")
             self.logger.info(f"  Tiempo de ejecución: {result.execution_time:.2f}s")
-            self.logger.info(f" Registros procesados: {result.records_input} → {result.records_output}")
+            self.logger.info(f" Registros procesados: {result.records_input} a {result.records_output}")
             self.logger.info("=" * 70 + "\n")
             
         except Exception as e:
@@ -126,16 +126,16 @@ class Pipeline:
         print(" ESTADÍSTICAS GENERALES - AÑO 2023")
         print("=" * 70)
         
-        print(f"\n Total de ventas: ${total_ventas:,.2f}")
+        print(f"Total de ventas: ${total_ventas:,.2f}")
         print(f" Total de transacciones: {total_transacciones}")
         print(f" Promedio por venta: ${promedio_venta:,.2f}")
         
-        print(f"\n TOP 3 VENDEDORES:")
+        print(f" TOP 3 VENDEDORES:")
         for i, row in vendedor_df.head(3).iterrows():
             print(f"   {i+1}. {row['Vendedor']}: ${row['Total_Ventas']:,.2f}")
         
         mejor_mes_row = mensual_df.loc[mensual_df['Total_Ventas'].idxmax()]
-        print(f"\n MEJOR MES:")
+        print(f" MEJOR MES:")
         print(f"   {mejor_mes_row['Nombre_Mes']}: ${mejor_mes_row['Total_Ventas']:,.2f}")
         
         print("\n" + "=" * 70 + "\n")

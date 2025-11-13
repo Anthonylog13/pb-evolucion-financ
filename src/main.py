@@ -24,8 +24,8 @@ def main():
     
    
     result = pipeline.execute(
-        input_path='data/datos_ventas.xlsx',
-        output_path='data/resumen_ventas.xlsx'
+        input_path='ventas-analytics/data/datos_ventas.xlsx',
+        output_path='ventas-analytics/data/resumen_ventas.xlsx'
     )
     
     

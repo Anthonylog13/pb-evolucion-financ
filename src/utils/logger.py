@@ -1,16 +1,16 @@
 from core.interfaces import ILogger
 
 class ConsoleLogger(ILogger):
-    """Logger concreto: Imprime a consola con formato"""
+    """ Imprime a consola con formato"""
     
     def info(self, message: str) -> None:
-        print(f"{message}")
+        print(f"[INFO]  {message}")
     
     def success(self, message: str) -> None:
-        print(f"{message}")
+        print(f"[SUCCESS] {message}")
     
     def warning(self, message: str) -> None:
-        print(f" {message}")
+        print(f" [WARNING] {message}")
     
     def error(self, message: str) -> None:
-        print(f" {message}")
+        print(f"[ERROR] {message}")
